@@ -1,32 +1,32 @@
 package Inheritance;
 public class HourlyEmployee extends Employee {
-    double wage;
-    double hours_worked;
+    int wage;
+    int hours_worked;
 
-    public HourlyEmployee(String f, String l, int sn, double w, double hw) {
+    public HourlyEmployee(String f, String l, int sn, int w, int hw) {
         super(f, l, sn);
         this.wage = w;
         this.hours_worked = hw;
     }
 
-    public void setWage(double w) {
+    public void setWage(int w) {
         this.wage = w;
     }
 
-    public void setHoursWorked(double hw) {
+    public void setHoursWorked(int hw) {
         this.hours_worked = hw;
     }
 
-    public double getWage() {
+    public int getWage() {
         return this.wage;
     }
 
-    public double getHoursWorked() {
+    public int getHoursWorked() {
         return this.hours_worked;
     }
 
     @Override
     public String toString() {
-        return super.toString() + String.format(" | wage: $%.2f | hours worked: %.1f", this.wage, this.hours_worked);
+        return super.toString() + String.format(" | wage: $%d | hours worked: %d", this.wage, this.hours_worked);
     }
 }
