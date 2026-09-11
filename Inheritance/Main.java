@@ -7,7 +7,7 @@ public class Main {
             new HourlyEmployee("Mary", "Quinn", 333333333, 19, 47),
             new CommissionEmployee("Nicole", "Dior", 444444444, 0.15, 50000),
             new SalariedEmployee("Renwa", "Chanel", 555555555, 1700),
-            new Employee("Mike", "Davenport", 666666666),
+            new BaseEmployee("Mike", "Davenport", 666666666, 95000),
             new CommissionEmployee("Mahnaz", "Vaziri", 777777777, 0.22, 40000)
         };
 
