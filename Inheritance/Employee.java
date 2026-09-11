@@ -33,4 +33,9 @@ public class Employee {
     public int getSocialSecurityNumber() {
         return this.social_num;
     }
+
+    @Override
+    public String toString() {
+        return this.first_name + " " + this.last_name + " (SSN: " + this.social_num + ")";
+    }
 }
