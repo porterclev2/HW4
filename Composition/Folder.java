@@ -27,5 +27,20 @@ public class Folder {
 
     public ArrayList<Folder> getSubFolders() {
         return this.subfolders;
-    } 
+    }
+    
+    public File addFile(String filename) {
+        File f = new File(filename);
+        this.files.add(f);
+        return f;
+    }
+
+    public void deleteFile(String filename) {
+        for (int i = 0; i < this.files.size(); i++) {
+            if (this.files.get(i).getName().equals(filename)) {
+                this.files.remove(i);
+                return;
+            }
+        }
+    }
 }
