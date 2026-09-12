@@ -68,4 +68,16 @@ public class Folder {
         this.subfolders.clear();
         this.files.clear();
     }
+
+    public void print(String indent) {
+        System.out.printf("%s%s\n", indent, this.name);
+
+        for (Folder sub : this.subfolders) {
+            sub.print(indent + "    ");
+        }
+
+        for (File f : this.files) {
+            f.print(indent + "    ");
+        }
+    }
 }
