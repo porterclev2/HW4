@@ -43,4 +43,29 @@ public class Folder {
             }
         }
     }
+    
+    public Folder addSubFolder(String foldername) {
+        Folder f = new Folder(foldername);
+        this.subfolders.add(f);
+        return f;
+    }
+
+
+    public void deleteSubFolder(String foldername) {
+        for (int i = 0; i < this.subfolders.size(); i++) {
+            if (this.subfolders.get(i).getName().equals(foldername)) {
+                this.subfolders.get(i).deleteContents();
+                this.subfolders.remove(i);
+                return;
+            }
+        }
+    }
+
+    public void deleteContents() {
+        for (Folder sub : this.subfolders) {
+            sub.deleteContents();
+        }
+        this.subfolders.clear();
+        this.files.clear();
+    }
 }
